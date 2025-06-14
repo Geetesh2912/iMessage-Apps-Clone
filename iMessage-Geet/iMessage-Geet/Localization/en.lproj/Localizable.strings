@@ -1,0 +1,24 @@
+// Created by Geetesh Mandaogade on 15/06/25.
+
+// MARK: - HomeViewController
+
+/* Main title */
+"messages_header" = "Messages";
+
+/* Top section headers */
+"all_messages_title" = "All Messages";
+"known_senders_title" = "Known Senders";
+"unknown_senders_title" = "Unknown Senders";
+"unread_messages_title" = "Unread Messages";
+
+/* SMS Filter section */
+"filtered_by_sms_filter_header" = "FILTERED BY SMS FILTER";
+"all_transactions_title" = "All Transactions";
+"finance_title" = "Finance";
+"orders_title" = "Orders";
+"reminders_title" = "Reminders";
+"promotions_title" = "Promotions";
+
+/* Bottom section titles */
+"junk_title" = "Junk";
+"recently_deleted_title" = "Recently Deleted";
