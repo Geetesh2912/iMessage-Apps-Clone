@@ -1,0 +1,24 @@
+// Created by Geetesh Mandaogade on 15/06/25.
+
+// MARK: - HomeViewController
+
+/* Main title */
+"messages_title" = "Nachrichten";
+
+/* Top section headers */
+"all_messages_title" = "Alle Nachrichten";
+"known_senders_title" = "Bekannte Absender";
+"unknown_senders_title" = "Unbekannte Absender";
+"unread_messages_title" = "Ungelesene Nachrichten";
+
+/* SMS Filter section */
+"filtered_by_sms_filter_header" = "GEFILTERT NACH SMS-FILTER";
+"all_transactions_title" = "Alle Transaktionen";
+"finance_title" = "Finanzen";
+"orders_title" = "Bestellungen";
+"reminders_title" = "Erinnerungen";
+"promotions_title" = "Werbung";
+
+/* Bottom section titles */
+"junk_title" = "Spam";
+"recently_deleted_title" = "Zuletzt gelöscht";
