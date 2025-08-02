@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         title = NSLocalizedString("messages_header", comment: "")
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        tableView.register(MessageCategoryCell.self, forCellReuseIdentifier: MessageCategoryCell.reuseIdentifier)
         view.addSubview(tableView)
     }
 
@@ -51,9 +51,17 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-        cell.textLabel?.text = "Message \(indexPath.row + 1)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: MessageCategoryCell.reuseIdentifier, for: indexPath) as! MessageCategoryCell
+        cell.configure(
+            icon: UIImage(systemName: "bubble.left.and.bubble.right")!,
+            title: "All messages",
+            unreadMessagesCount: 2)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+
 }
 
