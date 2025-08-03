@@ -31,7 +31,9 @@ class MessageCategoryCell: UITableViewCell {
 
     // MARK: - Public API
 
-    func configure(icon: UIImage, title: String, unreadMessagesCount: Int?) {
+    func configure(icon: UIImage?,
+                   title: String,
+                   unreadMessagesCount: Int?) {
         messageCategoryView.configureView(
             with: icon,
             title: title,

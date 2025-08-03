@@ -24,12 +24,14 @@ class MessageCategoryView: UIView {
         let arrowImageView = UIImageView()
         arrowImageView.translatesAutoresizingMaskIntoConstraints = false
         arrowImageView.image = UIImage(systemName: "greaterthan")
+        arrowImageView.tintColor = .gray
         return arrowImageView
     }()
 
     private lazy var unreadMessagesLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,14 +51,18 @@ class MessageCategoryView: UIView {
 
     // MARK: - Public APIs
 
-    func configureView(with iconImage: UIImage,
+    func configureView(with iconImage: UIImage?,
                        title: String,
                        unreadMessagesCount: Int?) {
-        iconImageView.image = iconImage
-        titleLabel.text = title
+        if let iconImage {
+            iconImageView.image = iconImage
+        }
+
         if let unreadMessagesCount {
             unreadMessagesLabel.text = String(unreadMessagesCount)
         }
+
+        titleLabel.text = title
     }
 
     // MARK: - Private Helpers
@@ -65,7 +71,7 @@ class MessageCategoryView: UIView {
         NSLayoutConstraint.activate([
             iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 30),
+            iconImageView.widthAnchor.constraint(equalToConstant: 20),
             iconImageView.heightAnchor.constraint(equalToConstant: 20),
 
             titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 12),
@@ -80,7 +86,6 @@ class MessageCategoryView: UIView {
             arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             arrowImageView.widthAnchor.constraint(equalToConstant: 10),
             arrowImageView.heightAnchor.constraint(equalToConstant: 20),
-
         ])
     }
 
