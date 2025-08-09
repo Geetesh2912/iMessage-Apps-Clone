@@ -29,7 +29,9 @@ class HomeViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         title = NSLocalizedString("messages_header", comment: "")
 
-        tableView.register(MessageCategoryCell.self, forCellReuseIdentifier: MessageCategoryCell.reuseIdentifier)
+        tableView.register(
+            MessageCategoryCell.self,
+            forCellReuseIdentifier: MessageCategoryCell.reuseIdentifier)
         view.addSubview(tableView)
     }
 

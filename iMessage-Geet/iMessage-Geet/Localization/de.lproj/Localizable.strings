@@ -1,6 +1,6 @@
 // Created by Geetesh Mandaogade on 15/06/25.
 
-// MARK: - HomeViewController
+// MARK: - MessageCategoriesViewController
 
 /* Main title */
 "messages_title" = "Nachrichten";
@@ -22,3 +22,8 @@
 /* Bottom section titles */
 "junk_title" = "Spam";
 "recently_deleted_title" = "Zuletzt gelöscht";
+
+// MARK: - Zero state
+
+"zero_state_title_no_messages" = "Keine Nachrichten";
+"zero_state_subtitle_no_messages" = "Nachrichten, die Sie senden oder empfangen, werden hier angezeigt.";
