@@ -1,6 +1,6 @@
 // Created by Geetesh Mandaogade on 15/06/25.
 
-// MARK: - HomeViewController
+// MARK: - MessageCategoriesViewController
 
 /* Main title */
 "messages_header" = "Messages";
@@ -22,3 +22,8 @@
 /* Bottom section titles */
 "junk_title" = "Junk";
 "recently_deleted_title" = "Recently Deleted";
+
+// MARK: - Zero state
+
+"zero_state_title_no_messages" = "No Messages";
+"zero_state_subtitle_no_messages" = "Messages you send or receive will appear here.";
