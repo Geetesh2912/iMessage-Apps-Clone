@@ -1,7 +1,6 @@
 //  Created by Geetesh Mandaogade on 02/08/25.
 
 import UIKit
-import Foundation
 
 class MessageCategoryCell: UITableViewCell {
 
@@ -15,6 +14,16 @@ class MessageCategoryCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+        setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Private Helpers
+
+    private func setupView() {
         contentView.addSubview(messageCategoryView)
         messageCategoryView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -23,10 +32,6 @@ class MessageCategoryCell: UITableViewCell {
             messageCategoryView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             messageCategoryView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Public API

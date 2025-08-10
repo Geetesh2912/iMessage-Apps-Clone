@@ -2,7 +2,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class MessageCategoriesViewController: UIViewController, UITableViewDelegate {
 
     // MARK: - Properties
 
@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
         tableView.backgroundColor = .systemGroupedBackground
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
         return tableView
     }()
 
@@ -45,7 +46,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension MessageCategoriesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return MessageCategoriesMock.sections[section].title
@@ -70,5 +71,15 @@ extension HomeViewController: UITableViewDataSource {
             title: messageCategory.title,
             unreadMessagesCount: messageCategory.unreadCount)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let messageCategory = MessageCategoriesMock.sections[indexPath.section].categories[indexPath.row]
+
+        let newViewController = MessagesListViewController(
+            title: messageCategory.title,
+            totalMessagesCount: messageCategory.totalMessagesCount,
+            categoryDescription: messageCategory.categoryDescription)
+        navigationController?.pushViewController(newViewController, animated: true)
     }
 }

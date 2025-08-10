@@ -1,6 +1,5 @@
 //  Created by Geetesh Mandaogade on 03/08/25.
 
-import Foundation
 import UIKit
 
 enum MessageCategoryType: Int {
@@ -24,6 +23,8 @@ struct MessageCategory {
     let title: String
     let iconName: String
     let unreadCount: Int?
+    let totalMessagesCount: Int
+    let categoryDescription: String
 }
 
 struct MessageSection {
@@ -37,57 +38,79 @@ class MessageCategoriesMock {
         MessageCategory(type: .allMessages,
                         title: NSLocalizedString("all_messages_title", comment: ""),
                         iconName: "bubble",
-                        unreadCount: 7),
+                        unreadCount: 7,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_all_messages", comment: "")),
 
         MessageCategory(type: .knownSenders,
                         title: NSLocalizedString("known_senders_title", comment: ""),
                         iconName: "person.circle",
-                        unreadCount: 1),
+                        unreadCount: 1,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_known_senders", comment: "")),
 
         MessageCategory(type: .unknownSenders,
                         title: NSLocalizedString("unknown_senders_title", comment: ""),
                         iconName: "person.crop.circle.badge.questionmark",
-                        unreadCount: 7),
+                        unreadCount: 7,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_unknown_senders", comment: "")),
 
         MessageCategory(type: .unread,
                         title: NSLocalizedString("unread_messages_title", comment: ""),
                         iconName: "exclamationmark.bubble",
-                        unreadCount: 3),
+                        unreadCount: 3,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_unread_messages", comment: "")),
 
         MessageCategory(type: .allTransactions,
                         title: NSLocalizedString("all_transactions_title", comment: ""),
                         iconName: "arrow.left.arrow.right",
-                        unreadCount: 4),
+                        unreadCount: 4,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_all_transactions", comment: "")),
 
         MessageCategory(type: .finance,
                         title: NSLocalizedString("finance_title", comment: ""),
                         iconName: "creditcard",
-                        unreadCount: 1),
+                        unreadCount: 1,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_finance", comment: "")),
 
         MessageCategory(type: .orders,
                         title: NSLocalizedString("orders_title", comment: ""),
                         iconName: "shippingbox",
-                        unreadCount: 3),
+                        unreadCount: 3,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_orders", comment: "")),
 
         MessageCategory(type: .reminders,
                         title: NSLocalizedString("reminders_title", comment: ""),
                         iconName: "calendar.badge.clock",
-                        unreadCount: 4),
+                        unreadCount: 4,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_reminders", comment: "")),
 
         MessageCategory(type: .promotions,
                         title: NSLocalizedString("promotions_title", comment: ""),
                         iconName: "megaphone",
-                        unreadCount: 4),
+                        unreadCount: 4,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_promotions", comment: "")),
 
         MessageCategory(type: .junk,
                         title: NSLocalizedString("junk_title", comment: ""),
                         iconName: "xmark.bin",
-                        unreadCount: 4),
+                        unreadCount: 4,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_junk", comment: "")),
 
         MessageCategory(type: .recentlyDeleted,
                         title: NSLocalizedString("recently_deleted_title", comment: ""),
                         iconName: "trash",
-                        unreadCount: 4),
+                        unreadCount: 4,
+                        totalMessagesCount: 0,
+                        categoryDescription: NSLocalizedString("zero_state_subtitle_deleted", comment: "")),
     ]
 
     static let sections: [MessageSection] = [
