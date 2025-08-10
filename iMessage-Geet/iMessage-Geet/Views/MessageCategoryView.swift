@@ -1,6 +1,5 @@
 //  Created by Geetesh Mandaogade on 02/08/25.
 
-import Foundation
 import UIKit
 
 class MessageCategoryView: UIView {
@@ -69,23 +68,39 @@ class MessageCategoryView: UIView {
 
     private func setupViewConstraints() {
         NSLayoutConstraint.activate([
-            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            iconImageView.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: SpacingConstants.spacingOneX),
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 20),
-            iconImageView.heightAnchor.constraint(equalToConstant: 20),
+            iconImageView.widthAnchor.constraint(
+                equalToConstant: SpacingConstants.spacingOneX + SpacingConstants.spacingQuarterX),
+            iconImageView.heightAnchor.constraint(
+                equalToConstant: SpacingConstants.spacingOneX + SpacingConstants.spacingQuarterX),
 
-            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 12),
+            titleLabel.leadingAnchor.constraint(
+                equalTo: iconImageView.trailingAnchor,
+                constant: SpacingConstants.spacingOneX - SpacingConstants.spacingQuarterX),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
 
-            unreadMessagesLabel.leadingAnchor.constraint(greaterThanOrEqualTo: titleLabel.trailingAnchor, constant: 8),
-            unreadMessagesLabel.trailingAnchor.constraint(equalTo: arrowImageView.leadingAnchor, constant: -8),
+            unreadMessagesLabel.leadingAnchor.constraint(
+                greaterThanOrEqualTo: titleLabel.trailingAnchor,
+                constant: SpacingConstants.spacingHalfX),
+            unreadMessagesLabel.trailingAnchor.constraint(
+                equalTo: arrowImageView.leadingAnchor,
+                constant: -SpacingConstants.spacingHalfX),
             unreadMessagesLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
 
-            arrowImageView.leadingAnchor.constraint(equalTo: unreadMessagesLabel.trailingAnchor, constant: 8),
-            arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            arrowImageView.leadingAnchor.constraint(
+                equalTo: unreadMessagesLabel.trailingAnchor,
+                constant: SpacingConstants.spacingHalfX),
+            arrowImageView.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: SpacingConstants.spacingQuarterX - SpacingConstants.spacingOneAndHalfX),
             arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            arrowImageView.widthAnchor.constraint(equalToConstant: 10),
-            arrowImageView.heightAnchor.constraint(equalToConstant: 20),
+            arrowImageView.widthAnchor.constraint(
+                equalToConstant: SpacingConstants.spacingHalfX + (SpacingConstants.spacingQuarterX/2)),
+            arrowImageView.heightAnchor.constraint(
+                equalToConstant: SpacingConstants.spacingOneX + SpacingConstants.spacingQuarterX),
         ])
     }
 

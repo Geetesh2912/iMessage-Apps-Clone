@@ -26,4 +26,15 @@
 // MARK: - Zero state
 
 "zero_state_title_no_messages" = "No Messages";
-"zero_state_subtitle_no_messages" = "Messages you send or receive will appear here.";
+
+"zero_state_subtitle_all_messages" = "Messages you send or receive will appear here.";
+"zero_state_subtitle_known_senders" = "Messages to and from known senders will appear here.";
+"zero_state_subtitle_unknown_senders" = "Messages from unknown senders will appear here.";
+"zero_state_subtitle_unread_messages" = "Messages that are unread will appear here.";
+"zero_state_subtitle_all_transactions" = "Messages filtered as transactions will appear here.";
+"zero_state_subtitle_finance" = "Messages filtered as Finance will appear here.";
+"zero_state_subtitle_orders" = "Messages filtered as Orders will appear here.";
+"zero_state_subtitle_reminders" = "Messages filtered as Reminders will appear here.";
+"zero_state_subtitle_promotions" = "Messages filtered as Promotions will appear here.";
+"zero_state_subtitle_junk" = "Messages filtered as junk will appear here.";
+"zero_state_subtitle_deleted" = "Conversations show the days remaining before deletion. After that time, messages will be permanently deleted. This may take up to 40 days.";

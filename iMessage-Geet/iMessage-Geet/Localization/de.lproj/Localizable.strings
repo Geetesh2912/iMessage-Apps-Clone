@@ -26,4 +26,15 @@
 // MARK: - Zero state
 
 "zero_state_title_no_messages" = "Keine Nachrichten";
-"zero_state_subtitle_no_messages" = "Nachrichten, die Sie senden oder empfangen, werden hier angezeigt.";
+
+"zero_state_subtitle_all_messages" = "Nachrichten, die Sie senden oder empfangen, werden hier angezeigt.";
+"zero_state_subtitle_known_senders" = "Nachrichten von und an bekannte Absender werden hier angezeigt.";
+"zero_state_subtitle_unknown_senders" = "Nachrichten von unbekannten Absendern werden hier angezeigt.";
+"zero_state_subtitle_unread_messages" = "Ungelesene Nachrichten werden hier angezeigt.";
+"zero_state_subtitle_all_transactions" = "Nachrichten, die als Transaktionen gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_finance" = "Nachrichten, die als Finanzen gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_orders" = "Nachrichten, die als Bestellungen gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_reminders" = "Nachrichten, die als Erinnerungen gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_promotions" = "Nachrichten, die als Werbung gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_junk" = "Nachrichten, die als Spam gefiltert wurden, werden hier angezeigt.";
+"zero_state_subtitle_deleted" = "Unterhaltungen zeigen die verbleibenden Tage bis zur Löschung an. Danach werden die Nachrichten endgültig gelöscht. Dies kann bis zu 40 Tage dauern.";
