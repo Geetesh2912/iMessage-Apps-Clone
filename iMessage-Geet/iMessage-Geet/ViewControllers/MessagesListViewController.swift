@@ -16,6 +16,37 @@ class MessagesListViewController: UIViewController {
         return view
     }()
 
+    private lazy var leftBarBackButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(NSLocalizedString("list_vc_nav_bar_left_button_title", comment: ""), for: .normal)
+        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        button.addTarget(self, action: #selector(leftBarButtonTapped), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var rightBarMoreOptions: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
+        button.addTarget(self, action: #selector(rightBarMoreOptionsTapped), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var rightBarNewMessageButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "square.and.pencil.circle"), for: .normal)
+        button.addTarget(self, action: #selector(rightBarNewMessageButtonTapped), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var rightBarButtonStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [rightBarMoreOptions, rightBarNewMessageButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = SpacingConstants.spacingOneAndHalfX
+        stackView.axis = .horizontal
+        stackView.alignment = .bottom
+        return stackView
+    }()
+
     // MARK: - Initializer
 
     public init(title: String, totalMessagesCount: Int, categoryDescription: String) {
@@ -39,6 +70,7 @@ class MessagesListViewController: UIViewController {
         setupViewHierarchy()
         setupViews()
         setupViewConstraints()
+        setupNavigationBar()
     }
 
     // MARK: - Private helpers
@@ -70,5 +102,27 @@ class MessagesListViewController: UIViewController {
             constraints.append(zeroMessagesStateView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor))
         }
         NSLayoutConstraint.activate(constraints)
+    }
+
+    private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarBackButton)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBarButtonStack)
+    }
+
+    @objc
+    func leftBarButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+
+    @objc
+    func rightBarMoreOptionsTapped() {
+        // no-op
+        print("##GM: inside rightBarMoreOptionsTapped")
+    }
+
+    @objc
+    func rightBarNewMessageButtonTapped() {
+        // no-op
+        print("##GM: inside rightBarNewMessageButtonTapped")
     }
 }

@@ -22,7 +22,7 @@ class MessageCategoryView: UIView {
     private lazy var arrowImageView: UIImageView = {
         let arrowImageView = UIImageView()
         arrowImageView.translatesAutoresizingMaskIntoConstraints = false
-        arrowImageView.image = UIImage(systemName: "greaterthan")
+        arrowImageView.image = UIImage(systemName: "chevron.forward")
         arrowImageView.tintColor = .gray
         return arrowImageView
     }()
@@ -97,10 +97,6 @@ class MessageCategoryView: UIView {
                 equalTo: trailingAnchor,
                 constant: SpacingConstants.spacingQuarterX - SpacingConstants.spacingOneAndHalfX),
             arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            arrowImageView.widthAnchor.constraint(
-                equalToConstant: SpacingConstants.spacingHalfX + (SpacingConstants.spacingQuarterX/2)),
-            arrowImageView.heightAnchor.constraint(
-                equalToConstant: SpacingConstants.spacingOneX + SpacingConstants.spacingQuarterX),
         ])
     }
 
