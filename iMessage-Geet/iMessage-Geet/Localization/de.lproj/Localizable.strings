@@ -38,3 +38,7 @@
 "zero_state_subtitle_promotions" = "Nachrichten, die als Werbung gefiltert wurden, werden hier angezeigt.";
 "zero_state_subtitle_junk" = "Nachrichten, die als Spam gefiltert wurden, werden hier angezeigt.";
 "zero_state_subtitle_deleted" = "Unterhaltungen zeigen die verbleibenden Tage bis zur Löschung an. Danach werden die Nachrichten endgültig gelöscht. Dies kann bis zu 40 Tage dauern.";
+
+// MARK: - MessagesListViewController
+
+"list_vc_nav_bar_left_button_title" = "Filter";

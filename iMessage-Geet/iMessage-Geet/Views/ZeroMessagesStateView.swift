@@ -30,7 +30,7 @@ class ZeroMessagesStateView: UIView {
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "bubble.fill")
+        imageView.image = UIImage(systemName: "message.fill")
         imageView.tintColor = .gray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
